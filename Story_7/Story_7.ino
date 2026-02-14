@@ -24,23 +24,22 @@ void stop()
   digitalWrite(Left_Rev, LOW);
   digitalWrite(Right_Rev, LOW);
 }
-void left()
-{
-  digitalWrite(Left_Enable, LOW);
+void left() {
+  digitalWrite(Left_Enable, HIGH);
   digitalWrite(Right_Enable, HIGH);
   digitalWrite(Left_Fwd, LOW);
-  digitalWrite(Right_Fwd, HIGH);
-  digitalWrite(Left_Rev, LOW);
+  digitalWrite(Left_Rev, HIGH); 
+  digitalWrite(Right_Fwd, HIGH); 
   digitalWrite(Right_Rev, LOW);
 }
 void right()
 {
   digitalWrite(Left_Enable, HIGH);
-  digitalWrite(Right_Enable, LOW);
+  digitalWrite(Right_Enable, HIGH);
   digitalWrite(Left_Fwd, HIGH);
   digitalWrite(Right_Fwd, LOW);
   digitalWrite(Left_Rev, LOW);
-  digitalWrite(Right_Rev, LOW);
+  digitalWrite(Right_Rev, HIGH);
 }
 void figure_of_eight(){
   unsigned long time;

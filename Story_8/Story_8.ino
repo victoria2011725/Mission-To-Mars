@@ -35,15 +35,15 @@ void reverse()
   digitalWrite(Left_Rev, HIGH);
   digitalWrite(Right_Rev, HIGH);
   
-  
+
 }
 void left()
 {
-  digitalWrite(Left_Enable, LOW);
+  digitalWrite(Left_Enable, HIGH);
   digitalWrite(Right_Enable, HIGH);
   digitalWrite(Left_Fwd, LOW);
   digitalWrite(Right_Fwd, HIGH);
-  digitalWrite(Left_Rev, LOW);
+  digitalWrite(Left_Rev, HIGH);
   digitalWrite(Right_Rev, LOW);
 }
 #include <NewPing.h>

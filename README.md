@@ -36,3 +36,7 @@ Story 8: I didn't struggle too much on this task as I needed to blend the New Pi
 
 Story 9: I really enjoyed thinking of a solution to this one - once again I already had the functions needed to solve this from previous stories so it was beyond just writing code and more about problem solving. 
 
+Story 10: 
+<img width="1536" height="1024" alt="Boarding Pass - Mission to Mars" src="https://github.com/user-attachments/assets/805024e4-320e-4f6c-8b5b-cc72ef05742c" />
+
+

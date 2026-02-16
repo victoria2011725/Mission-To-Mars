@@ -74,7 +74,7 @@ void loop()
     distance = sonar.ping_cm();
 
     Serial.print("Ping: ");
-    Serial.print(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
+    Serial.println(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
   }
   stop();
   delay(500);

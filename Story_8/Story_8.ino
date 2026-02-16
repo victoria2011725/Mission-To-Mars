@@ -3,10 +3,10 @@
 // ---------------------------------------------------------------------------
 const int Left_Rev = 12;
 const int Left_Fwd = 11;
-const int Left_Enable=10;
-const int Right_Enable=9;
-const int Right_Rev =8;
-const int Right_Fwd=7;
+const int Left_Enable = 10;
+const int Right_Enable = 9;
+const int Right_Rev = 8;
+const int Right_Fwd = 7;
 
 void forward()
 {
@@ -54,22 +54,27 @@ void left()
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
 
-void setup() {
+void setup() 
+{
   pinMode(Left_Rev, OUTPUT);
-  pinMode(Left_Fwd,OUTPUT);
-  pinMode(Left_Enable,OUTPUT);
-  pinMode(Right_Enable,OUTPUT);
-  pinMode(Right_Rev,OUTPUT);
-  pinMode(Right_Fwd,OUTPUT);
+  pinMode(Left_Fwd, OUTPUT);
+  pinMode(Left_Enable, OUTPUT);
+  pinMode(Right_Enable, OUTPUT);
+  pinMode(Right_Rev, OUTPUT);
+  pinMode(Right_Fwd, OUTPUT);
   Serial.begin(115200); // Open serial monitor at 115200 baud to see ping results.
-  int distance = sonar.ping_cm();
 }
-void loop(){
-  while (sonar.ping_cm()>12 or sonar.ping_cm()==0) {
+void loop()
+{
+  int distance = sonar.ping_cm();
+  while (distance > 12 or distance == 0) 
+  {
     forward();
     delay(50);                     // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
+    distance = sonar.ping_cm();
+
     Serial.print("Ping: ");
-    Serial.print(sonar.ping_cm()); // Send ping, get distance in cm and print result (0 = outside set distance range)
+    Serial.print(distance); // Send ping, get distance in cm and print result (0 = outside set distance range)
   }
   stop();
   delay(500);
